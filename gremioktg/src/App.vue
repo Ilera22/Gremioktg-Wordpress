@@ -1,5 +1,5 @@
 <template>
-  <v-app bg-blue>
+  <v-app>
     <nav><NavBar /></nav>
     
     <v-main>
@@ -33,8 +33,6 @@ export default {
 </script>
 
 <style> 
-v-app {
-  background-color: rgb(58, 58, 58);
-}
+
 
 </style>
