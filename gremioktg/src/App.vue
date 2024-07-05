@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app bg-blue>
     <nav><NavBar /></nav>
     
     <v-main>
@@ -32,6 +32,9 @@ export default {
 };
 </script>
 
-<style>
-/* Aquí puedes agregar estilos globales o específicos para tu App.vue */
+<style> 
+v-app {
+  background-color: rgb(58, 58, 58);
+}
+
 </style>

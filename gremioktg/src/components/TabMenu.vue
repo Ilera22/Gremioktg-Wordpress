@@ -37,7 +37,7 @@
                 <v-row>
                   <!-- Listado de artículos -->
                   <v-col v-for="(item, index) in recentPosts" :key="index" cols="12" class="py-1">
-                    <v-card variant="flat" class="bg-blue">
+                    <v-card class="v-card-styles">
                       <div class="d-flex flex-no-wrap justify-space-between">
                         <div class="content-container">
                           <v-card-title class="text-h6 wrap">{{ item.title.rendered }}</v-card-title>
@@ -69,7 +69,7 @@
                 <v-row>
                   <!-- Listado de artículos -->
                   <v-col v-for="(item, index) in guidePosts" :key="index" cols="12" class="py-1">
-                    <v-card variant="flat" class="bg-blue">
+                    <v-card class="v-card-styles">
                       <div class="d-flex flex-no-wrap justify-space-between">
                         <div class="content-container">
                           <v-card-title class="text-h6 wrap">{{ item.title.rendered }}</v-card-title>
@@ -101,7 +101,7 @@
                 <v-row>
                   <!-- Listado de artículos -->
                   <v-col v-for="(item, index) in topPosts" :key="index" cols="12" class="py-1">
-                    <v-card variant="flat" class="bg-blue">
+                    <v-card class="v-card-styles">
                       <div class="d-flex flex-no-wrap justify-space-between">
                         <div class="content-container">
                           <v-card-title class="text-body-1 wrap">{{ item.title.rendered }}</v-card-title>
@@ -175,7 +175,7 @@ export default {
     },
     async fetchTopPosts() {
       try {
-        const response = await axios.get('https://wp.gremioktg.com/wp-json/wp/v2/posts?per_page=4&categories=8&_embed=true'); // Cambia "8" por el ID de la categoría "Tops"
+        const response = await axios.get('https://wp.gremioktg.com/wp-json/wp/v2/posts?per_page=4&categories=8&orderby=views&order=desc&_embed=true'); 
         const posts = await this.fetchFeaturedImages(response.data);
         this.topPosts = posts;
       } catch (error) {
@@ -212,7 +212,7 @@ export default {
   width: 90%;
   margin: 0 auto; /* Centrar el contenedor opcionalmente */
   border-radius: 25px;
-  background-color: gray;
+  background-color: rgba(71, 71, 71, 0.479);
 }
 
 .content-container {
@@ -223,5 +223,9 @@ export default {
 .wrap {
   white-space: normal; /* Permitir que el texto se envuelva */
   overflow-wrap: break-word; /* Permitir que las palabras largas se dividan */
+}
+
+.v-card-styles {
+  background-color: var(--v-theme-primary); /* No esta funcionando peor tambien sirve que queden en negro */
 }
 </style>

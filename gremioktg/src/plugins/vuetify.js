@@ -5,6 +5,19 @@ import 'vuetify/styles'
 // Vuetify
 import { createVuetify } from 'vuetify'
 
-export default createVuetify(
-  // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
-)
+import colors from 'vuetify/util/colors'
+
+export default createVuetify({
+  theme: {
+    themes: {
+      light: {
+        dark: true,
+        colors: {
+          primary: colors.purple.darken4, // #E53935
+          secondary: colors.red.lighten4, // #FFCDD2
+    
+        }
+      },
+    },
+  },
+})

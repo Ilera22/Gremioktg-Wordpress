@@ -27,10 +27,10 @@
     data() {
       return {
         images: [
-          { src: "/HonkaiStarRail-Feature-image.jpg", title: "Honkai StarRail", link: "https://example.com/local" }, // Ruta de la imagen local
-          { src: "https://cdn.vuetifyjs.com/images/parallax/material.jpg", title: "Image 2", link: "https://example.com/2" },
-          { src: "https://cdn.vuetifyjs.com/images/parallax/material.jpg", title: "Image 3", link: "https://example.com/3" },
-          { src: "https://cdn.vuetifyjs.com/images/parallax/material.jpg", title: "Image 4", link: "https://example.com/4" }
+          { src: require('@/assets/HonkaiStarRail-Feature-image.jpg'), title: "Honkai StarRail", link: "https://example.com/local" }, // Ruta de la imagen local
+          { src: require('@/assets/HonkaiStarRail-Feature-image.jpg'), title: "Image 2", link: "https://example.com/2" },
+          { src: require('@/assets/HonkaiStarRail-Feature-image.jpg'), title: "Image 3", link: "https://example.com/3" },
+          { src: require('@/assets/HonkaiStarRail-Feature-image.jpg'), title: "Image 4", link: "https://example.com/4" }
         ]
       };
     },
